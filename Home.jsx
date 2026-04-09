@@ -144,16 +144,16 @@ function Home() {
       {/* FEATURE CARDS (NAVIGATION) */}
       <div className="feature-cards">
         <div className="feature-row" onClick={handleApplyClick}>
-          <div className="feature-card"><img src="/src/assets/apply jobs.png" alt="Apply" /></div>
+          <div className="feature-card"><img src="apply jobs.png" alt="Apply" /></div>
         </div>
         <div className="feature-row" onClick={handlePostJobClick}>
-          <div className="feature-card"><img src="/src/assets/post a job.png" alt="Post" /></div>
+          <div className="feature-card"><img src="post a job.png" alt="Post" /></div>
         </div>
         <div className="feature-row" onClick={() => { setShowJobs(true); setShowPostJob(false); }}>
-          <div className="feature-card"><img src="/src/assets/job offer.png" alt="Jobs List" /></div>
+          <div className="feature-card"><img src="job offer.png" alt="Jobs List" /></div>
         </div>
         <div className="feature-row">
-          <div className="feature-card"><img src="/src/assets/jobs seekers.png" alt="Seekers" /></div>
+          <div className="feature-card"><img src="jobs seekers.png" alt="Seekers" /></div>
         </div>
       </div>
 

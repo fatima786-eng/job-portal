@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "./Home.css";
 import { FaSearch, FaTimes, FaExternalLinkAlt } from "react-icons/fa";
+import postJob from "../assets/post a job.png";
+import applyJobs from "../assets/apply jobs.png";
+import jobSeekers from "../assets/jobs seekers.png";
+import jobOffer from "../assets/job offer.png";
 
 function Home() {
   const [jobInput, setJobInput] = useState("");
@@ -143,20 +147,30 @@ function Home() {
 
       {/* FEATURE CARDS (NAVIGATION) */}
       <div className="feature-cards">
-        <div className="feature-row" onClick={handleApplyClick}>
-          <div className="feature-card"><img src="apply jobs.png" alt="Apply" /></div>
-        </div>
-        <div className="feature-row" onClick={handlePostJobClick}>
-          <div className="feature-card"><img src="post a job.png" alt="Post" /></div>
-        </div>
-        <div className="feature-row" onClick={() => { setShowJobs(true); setShowPostJob(false); }}>
-          <div className="feature-card"><img src="job offer.png" alt="Jobs List" /></div>
-        </div>
-        <div className="feature-row">
-          <div className="feature-card"><img src="jobs seekers.png" alt="Seekers" /></div>
-        </div>
-      </div>
+  <div className="feature-row">
+    <div className="feature-card">
+      <img src={postJob} alt="Post a Job" />
+    </div>
+  </div>
 
+  <div className="feature-row">
+    <div className="feature-card">
+      <img src={applyJobs} alt="Apply Jobs" />
+    </div>
+  </div>
+
+  <div className="feature-row">
+    <div className="feature-card">
+      <img src={jobSeekers} alt="Job Seekers" />
+    </div>
+  </div>
+
+  <div className="feature-row">
+    <div className="feature-card">
+      <img src={jobOffer} alt="Job Offer" />
+    </div>
+  </div>
+</div>
       {/* JOBS DISPLAY SECTION */}
       {showJobs && (
         <div className="jobs-wrapper">

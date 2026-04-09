@@ -1,0 +1,132 @@
+.overseas-page {
+  padding: 0 30px 30px;
+}
+
+/* HERO */
+.hero-section {
+  background: #d8c59c;
+  border-radius: 0 0 35px 35px;
+  padding: 5px 10px 40px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.home-title {
+  font-size: 42px;
+  color: #040553;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  line-height: 1.2;
+}
+
+.home-subtitle {
+  font-size: 18px;
+  color: #040553;
+  margin-bottom: 25px;
+}
+
+/* SEARCH */
+.single-search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 650px;
+  width: 90%;
+  margin: 0 auto;
+  background: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.single-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+}
+
+.search-btn {
+  background: #040553;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* JOBS */
+.overseas-heading {
+  color: #040553;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.overseas-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.overseas-card-link {
+  text-decoration: none;
+}
+
+.overseas-card {
+  background: #d8c59c;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  animation: fadeCard 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.2s;
+}
+
+.overseas-card:hover {
+  transform: translateY(-5px);
+}
+
+.overseas-card h2 {
+  color: #040553;
+  margin-bottom: 10px;
+}
+
+.overseas-card p {
+  color: #040553;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+@keyframes fadeCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+  .overseas-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .overseas-card {
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  .overseas-card h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .overseas-card p {
+    font-size: 13px;
+    margin: 4px 0;
+  }
+}

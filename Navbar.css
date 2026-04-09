@@ -1,0 +1,223 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 18px 25px 10px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.logo {
+  height: 60px;
+  margin-top: 5px;
+}
+
+/* Desktop: both icon groups same spacing */
+.navbar-icons,
+.navbar-menu {
+  display: flex;
+  gap: 30px;             /* equal gap between icons */
+  list-style: none;
+  margin: 10px 0;        /* equal top + bottom margin */
+  padding: 0;
+  align-items: center;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Style Link to behave same as menu-item */
+.menu-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #040553;
+  gap: 5px; /* spacing between icon and text */
+}
+
+.icon {
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.text {
+  opacity: 0;
+  font-size: 12px;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+.menu-item:hover .text,
+.menu-link:hover .text {
+  opacity: 1;
+}
+
+.menu-item:hover .icon,
+.menu-link:hover .icon {
+  color: #2563eb;
+}
+
+/* Hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #040553;
+}
+
+/* ================= MOBILE VIEW ================= */
+@media (max-width: 768px) {
+  .navbar {
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .logo {
+    height: 45px;
+    margin-top: 0;
+  }
+
+  .navbar-icons {
+    gap: 15px;
+    margin-top: 0;
+  }
+
+  .navbar-icons .menu-item,
+  .navbar-icons .menu-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-icons .text {
+    opacity: 1 !important;
+    font-size: 10px;
+    margin-top: 2px;
+    font-weight: bold;
+    color: #9596ec;
+    display: block;
+  }
+
+  .navbar-icons .icon {
+    font-size: 20px;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    right: 10px;
+    background: white;
+    width: 180px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    gap: 15px;
+    z-index: 100;
+    margin-top: 0;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-menu .menu-item {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .navbar-menu .text {
+    opacity: 1;
+    font-size: 14px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* ================= LOGIN MODAL ================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.login-modal {
+  background: #d8c59c;
+  width: 350px;
+  max-width: 90%;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.login-modal h2 {
+  color: #040553;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-modal input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #040553;
+  outline: none;
+  font-size: 14px;
+}
+
+.login-modal input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+}
+
+.login-modal button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #040553;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-modal button:hover {
+  background: #2563eb;
+}
+
+.close-icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+  color: #040553;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.close-icon:hover {
+  color: #2563eb;
+}

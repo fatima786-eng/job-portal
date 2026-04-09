@@ -1,0 +1,93 @@
+.blog-page {
+  padding: 60px 20px;
+  background: #f8f9fc;
+  min-height: 100vh;
+}
+
+.blog-title {
+  text-align: center;
+  font-size: 38px;
+  color: #1f2b6c;
+  margin-bottom: 10px;
+}
+
+.blog-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.company-grid {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.company-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.company-card:hover {
+  transform: translateY(-8px);
+}
+
+.company-card h2 {
+  color: #1f2b6c;
+  margin-bottom: 15px;
+}
+
+.company-card p {
+  margin: 10px 0;
+  color: #444;
+}
+
+.company-card button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #1f2b6c;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.company-card button:hover {
+  background: #162055;
+}
+/* MOBILE VIEW ONLY */
+@media (max-width: 768px) {
+  .company-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .company-card {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .company-card h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .company-card p {
+    font-size: 12px;
+    margin: 5px 0;
+  }
+
+  .company-card button {
+    padding: 8px;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}

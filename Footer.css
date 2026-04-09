@@ -1,0 +1,94 @@
+.footer {
+  width: 100%;
+  background-color: transparent;
+  font-family: Arial, sans-serif;
+  color: #040553;
+}
+
+.footer-banner {
+  width: 100%;
+  position: relative; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 600px; 
+  /* 'cover' crops the image, 'contain' shows the FULL image */
+  object-fit: contain; 
+}
+
+.social-overlay-top {
+  position: absolute;
+  top: 40px; 
+  display: flex;
+  gap: 250px;
+  z-index: 10;
+}
+
+.social-overlay-top a {
+  color: #040553;
+  font-size: 32px;
+  transition: transform 0.3s;
+  filter: drop-shadow(0px 2px 2px rgba(255, 255, 255, 0.8));
+}
+
+.text-overlay-center {
+  position: absolute;
+  top: 110px; 
+  text-align: center;
+  width: 100%;
+
+}
+
+.text-overlay-center p {
+  margin: 4px 0;
+  font-size: 14px; 
+  font-weight: normal; 
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.bold-text {
+  font-weight: 900;
+}
+
+/* MOBILE VIEW - FULL WIDTH LARGE IMAGE */
+@media (max-width: 768px) {
+  .footer-banner {
+    width: 100%;
+    min-height: 220px; /* make footer taller */
+    overflow: hidden;
+  }
+
+  .footer-img {
+    width: 100%;
+    height: 220px;   /* fixed height for mobile */
+    object-fit: cover; /* fills full area like desktop */
+    display: block;
+  }
+
+  .social-overlay-top {
+    top: 20px;
+    gap: 75px;
+  }
+
+  .social-overlay-top a {
+    font-size: 20px;
+  }
+
+  .text-overlay-center {
+    top: 70px;
+    width: 100%;
+    
+  }
+
+  .text-overlay-center p {
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 3px 0;
+  }
+}
